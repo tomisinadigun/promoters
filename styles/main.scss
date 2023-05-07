@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+// style declarations 
+$color-primary:#0F6C07;
+$color-white:#FFFFFF;
+$color--alt-text-color:#6E6E6E;
+
+$font-fontFamily: 'Rubik', sans-serif;
+
+$text-size-one: 16px;
+$text-size-two: 12px;
+
+$fontWeight-600:600;
+$fontWeight-500:500;
+$fontWeight-400:400;
+$fontWeight-300:300;
+
+// spacing 
+$item-horizontal-space-three:6px;
+$item-horizontal-space-one:16px;
+$item-horizontal-space-two:24px;
+
+$item-vertical-space-three:6px;
+$item-vertical-space-one:16px;
+$item-vertical-space-two:24px;
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    padding-inline: 128px;
+}
+
+
+// title texts styles 
+@mixin text-title($fontSize:22px, $textColor:black, $font-weight:$fontWeight-600,){
+    font-size: $fontSize;
+    color: $textColor;
+    font-weight:$font-weight;
+    font-family: $font-fontFamily;
+}
+
+
+// major text styles 
+@mixin texts($fontSize:14px, $textColor:black, $font-weight:$fontWeight-400, $lineHeight:18px){
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    color: $textColor;
+    font-weight:$font-weight;
+    font-family: $font-fontFamily;
+}
+
+// flex containers styles
+@mixin horizontal($itemDisplay:flex, $justifyContent:space-between, $itemAlign:center) {
+    display: $itemDisplay;
+    justify-content: $justifyContent;
+    align-items: $itemAlign;
+}
+
+// buttons 
+@mixin generalBtn($btn-background:$color-primary, $btn-color:white, $btn-font-size:12px, $btn-font-weight:$fontWeight-600){
+    background-color: $btn-background;
+    color: white;
+    font-size: $btn-font-size;
+    font-weight: $btn-font-weight;
+    padding: 10px 24px;
+    border-radius: 8px 8px 0px 8px;
+    border: none;
+    outline: none;
+    @extend %elevation-one;
+}
+
+
+// shadow styles 
+// --------------
+%elevation-one {
+    box-shadow: 0px 0px 2px 2px rgba(128, 128, 128, 0.16)
+}
+
+%elevation-two {
+    box-shadow: 0px 2px 4px 2px rgba(128, 128, 128, 0.08)
+}
+
+%elevation-three {
+    box-shadow: 0px 0px 2px 1px rgba(128, 128, 128, 0.08)
+}
+
+// shadow styles end here
+
+// page header styles begins here 
+// ------------------------------
+.header {
+    @include horizontal();
+    padding-block: 30px;
+
+    #logo {
+        @include text-title($fontSize:32px, $textColor:$color-primary)
+    };
+    
+    #menuIcon {
+        display: none;
+        font-size: 32px;
+        font-weight: 600;
+        color: black;
+    }
+    #menuIcon {
+        cursor: pointer;
+    }
+    
+}
+
+.nav-list {
+    @include horizontal();
+    grid-column-gap: 42px;
+    li {
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            text-decoration: none;
+
+            .menu-name {
+                @include horizontal();
+                align-items: center;
+                grid-column-gap: 6px;
+                p {
+                    @include texts();
+                    color: $color--alt-text-color;
+                }
+                span {
+                    font-size: 20px;
+                    font-weight: $fontWeight-500;
+                    height: 20px;
+                    padding: 0px;
+                }
+            }
+        }
+
+        a:hover {
+            span {
+                color: $color-primary;
+            }
+            p {
+                color: $color-primary;
+            }
+            cursor: pointer;
+        }
+        list-style:none;
+        .itemIcon {
+            font-size: 32px;
+            color: $color--alt-text-color;
+        }
+    }
+    
+
+    .profilePicture {
+        width: 32px;
+        height: auto;
+        @extend %elevation-three;
+        border-radius: 50%;
+    }
+    
+}
+
+
+// slide-in menu card 
+.hidden-menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: fit-content;
+    height: 100%;
+    border: 0.5px solid $color--alt-text-color;
+    padding-inline: $item-vertical-space-one;
+    background-color: white;
+
+    @extend %elevation-one;
+
+    border-radius: 8px 0px 0px 8px;
+    .nav-list {
+        height: 100%;
+        @include horizontal($justifyContent:space-around,);
+        flex-direction: column;
+        grid-row-gap: 30px;
+    }
+
+    .close-hidden-menu {
+        color: black;
+        font-size: 32px;
+        position: absolute;
+    }
+    .close-hidden-menu:hover {
+    cursor: pointer;
+    }
+    
+}
+// slide-in menu card ends here 
+
+
+@media screen and (max-width:1024px) {
+    body {
+        padding-inline: 24px;
+    }
+    .header {
+        .nav-list {
+            display: none;
+        }
+        #menuIcon {
+            display: block;
+        }
+    }
+}
+// page header styles ends here 
+
+
+// slide in cards design 
+// ---------------------
+
+// profile card 
+.hidden-profile-card {
+    background-color: white;
+    border-radius: 8px 0px 0px 8px;
+    .hidden-profile-card-inner{
+        padding-bottom: 150px;
+    }
+    overflow-y: auto;
+    position: fixed;
+    top: 10;
+    right: 0;
+    max-height: 100vh;
+
+    @extend %elevation-one;
+    max-width: 570px;
+    // border: 1px solid red;
+
+    .profile-header {
+        .backdrop {
+            width: 100%;
+            max-height: 166px;
+        }
+
+        .profile-bio {
+            @include horizontal($justifyContent:none);
+            grid-column-gap: 12px;
+
+            figure {
+                padding-left: 12px;
+            }
+            .profile-image {
+                max-width: 127px;
+                width: 100%;
+                height: auto;
+                margin-top: -64px;
+                @extend %elevation-one;
+                border-radius: 50%;
+                
+            }
+            .about-user {
+                display: flex;
+                flex-direction: column;
+                grid-row-gap: 8px;
+                h3 {
+                    @include text-title($fontSize:24px, $font-weight:$fontWeight-600)
+                }
+                #about-me {
+                    width: 400px;
+                }
+                p {
+                    @include texts($fontSize:14px, $textColor:$color--alt-text-color)
+                }
+                span {
+                    @include texts($fontSize:14px, $textColor:$color-primary, $font-weight:$fontWeight-400)
+                }
+            }
+        }
+    }
+
+
+    .addressing {
+        padding-inline: 12px;
+        // profile input 
+        .group-input {
+            @include horizontal($justifyContent:none);
+            align-items: center;
+            margin-bottom: $item-horizontal-space-two;
+            .input-item {
+                flex-basis: 40%;
+                label {
+                    @include texts($fontSize:12px, $textColor:$color--alt-text-color);
+                }
+                p {
+                    @include texts($fontSize:16px, $font-weight:$fontWeight-500);
+                    margin-top:$item-horizontal-space-three;
+                }
+            }
+        }
+
+    }
+    
+    .gallery {
+        padding-inline: 12px;
+        .gallery-title {
+            p {
+                @include texts($fontSize:12px, $textColor:$color--alt-text-color);
+            }
+        }
+        .gallery-items {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-column-gap: $item-horizontal-space-three;
+            margin-top: $item-vertical-space-three;
+            .gallery-item {
+                width: 100%;
+                max-width: 245px;
+                height: auto;
+            }
+        }
+    }
+
+    .about-you {
+        padding-inline: 12px;
+        .about-title {
+            @include texts($fontSize:12px, $textColor:$color--alt-text-color);
+            margin-top: $item-horizontal-space-one;
+        }
+
+        .full-about-me {
+            @include texts($fontSize:14px, $textColor:black);
+            margin-top:$item-horizontal-space-three;
+        }
+    }
+
+    .settings {
+        a {
+            text-decoration: none;
+        }
+        padding-inline: 12px;
+        margin-top: 32px;
+        .setting-item {
+            display: flex;
+            align-items: center;
+            grid-column-gap: $item-vertical-space-one;
+            span {
+                font-size: 24px;
+                color: $color--alt-text-color;
+            }
+            p {
+                @include texts($fontSize:12px, $font-weight:$fontWeight-500, $textColor:black)
+            }
+        }
+    }
+    
+}
+
+.line {
+    margin-block: $item-horizontal-space-one;
+}
+.card-title {
+    @include text-title($fontSize:24px, $font-weight:$fontWeight-600);
+}
+
+.my-jobs {
+    border: 1px solid black;
+    min-width: 570px;
+    max-width: 570px;
+    position: fixed;
+    top: 10;
+    right: 0;
+    max-height: 100vh;
+    overflow-y: auto;
+    padding:24px;
+    .job-item {
+        .job-title {
+            @include horizontal($justifyContent:space-between,);
+            margin-bottom: $item-horizontal-space-two;
+            .event-title {
+                @include horizontal($justifyContent:none,);
+                grid-column-gap: 16px;
+            }
+            .event-image {
+                max-width: 52px;
+                width: 100%;
+            }
+            h4 {
+                @include texts($fontSize:16px, $font-weight:$fontWeight-600);
+            }
+            span {
+                @include texts($fontSize:24px, $font-weight:$fontWeight-600, $textColor:$color--alt-text-color);
+            }
+            span:hover {
+                cursor: pointer;
+            }
+            
+        }
+
+        .job-request-response {
+            border: 0.1px solid $color--alt-text-color;
+            padding: 24px;
+            border-radius: 8px 8px;
+            display: flex;
+            flex-direction: column;
+            grid-row-gap: 10px;
+            @extend %elevation-two;
+            p {
+                @include texts($fontSize:14px, $textColor:$color--alt-text-color,);
+            }
+            .request-reponse {
+                @include horizontal($justifyContent:none,);
+                grid-column-gap: 16px;
+                // margin-bottom: $item-horizontal-space-two;
+                p {
+                    color: $color-primary;
+                    font-weight: $fontWeight-500;
+                }
+                span {
+                    @include texts($fontSize:24px, $textColor:$color-primary, $font-weight:$fontWeight-500);
+                }
+            }
+
+            .acknowl-btn {
+                @include horizontal($justifyContent:right);
+                button {
+                    @include generalBtn();
+                }
+                button:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+// javascript actions 
+.slide-in {
+    transform: translateX(0px);
+    transition: 0.5s;
+}
+
+.slide-out {
+    transform: translateX(600px);
+    transition: 0.5s;
+}
+
+.hide-extension {
+    max-height: 50px;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+.show-extension {
+    max-height: 300px;
+    overflow-y: hidden;
+    transition: 0.5s;
+}

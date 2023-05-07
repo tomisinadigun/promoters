@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.2.96/css/materialdesignicons.min.css" integrity="sha512-LX0YV/MWBEn2dwXCYgQHrpa9HJkwB+S+bnBpifSOTO1No27TqNMKYoAn6ff2FBh03THAzAiiCwQ+aPX+/Qt/Ow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Promoters</title>
+</head>
+<body>
+    <header class="header">
+        <div id="logo">Promoters</div>
+        <nav class="nav-list">
+            <li>
+                <a href="">
+                    <span class="mdi mdi-home-outline itemIcon"></span>
+                    <div class="menu-name">
+                        <p>Home</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span class="mdi mdi-briefcase-outline itemIcon"></span>
+                    <div class="menu-name">
+                        <p>Find Jobs</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span class="mdi mdi-bell-outline itemIcon"></span>
+                    <div class="menu-name">
+                        <p>Notifications</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span class="mdi mdi-clipboard-list-outline itemIcon"></span>
+                    <div class="menu-name">
+                        <p>My Jobs</p>
+                        <span class="mdi mdi-chevron-down"></span>
+                    </div>
+                </a>
+            </li>
+            <li onclick="openProfile()">
+                <a>
+                    <figure><img src="images/userImg/profile picture (1).svg" alt="" class="profilePicture"></figure>
+                    <div class="menu-name">
+                        <p>My Profile</p>
+                        <span class="mdi mdi-chevron-down"></span>
+                    </div>
+                </a>
+            </li>
+        </nav>
+
+        <div id="menuIcon" onclick="openHiddenMenu()">
+            <span class="mdi mdi-menu"></span>
+        </div>
+    </header>
+    
+    <main>
+        <div class="hidden-profile-card">
+            <div class="hidden-profile-card-inner">
+                <div class="profile-header">
+                    <figure><img src="images/userImg/backdrop.svg" alt="" class="backdrop"></figure>
+                    <div class="profile-bio">
+                        <figure><img src="images/userImg/profile picture (1).svg" alt="" class="profile-image"></figure>
+                        <div class="about-user">
+                            <h3>Hannah Washinton</h3>
+                            <p id="about-me">Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit </p>
+                            <div>
+                                <p><span>25</span> Jobs Done</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-inline:12px"><hr class="line"></div>
+                <div class="addressing">
+                    <div class="group-input">
+                        <div class="input-item">
+                            <label for="">First Name</label>
+                            <p>Hannah</p>
+                        </div>
+                        <div class="input-item">
+                            <label for="">Last Name</label>
+                            <p>Washinton</p>
+                        </div>
+                    </div>
+                    <div class="group-input">
+                        <div class="input-item">
+                            <label for="">Age</label>
+                            <p>24</p>
+                        </div>
+                        <div class="input-item">
+                            <label for="">Level Of Education</label>
+                            <p>BSc</p>
+                        </div>
+                    </div>
+                    <div class="group-input">
+                        <div class="input-item">
+                            <label for="">State</label>
+                            <p>Lagos</p>
+                        </div>
+                        <div class="input-item">
+                            <label for="">City</label>
+                            <p>Ikeja</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-inline:12px"><hr class="line"></div>
+                <div class="gallery">
+                    <div class="gallery-title">
+                        <p>Gallery</p>
+                    </div>
+                    <div class="gallery-items">
+                        <figure><img src="images/userImg/Frame 53.svg" alt="" class="gallery-item"></figure>
+                        <figure><img src="images/userImg/Frame 51.svg" alt="" class="gallery-item"></figure>
+                        <figure><img src="images/userImg/Frame 53.svg" alt="" class="gallery-item"></figure>
+                    </div>
+                </div>
+                <div class="about-you">
+                    <p class="about-title">About</p>
+                    <p class="full-about-me">Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit </p>
+                </div>
+                <div class="settings">
+                    <a href="">
+                        <div class="setting-item">
+                            <span class="mdi mdi-face-agent"></span>
+                            <p>Contact Support</p>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="setting-item">
+                            <span class="mdi mdi-logout-variant"></span>
+                            <p>Logout</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hidden-menu">
+            <span class="mdi mdi-arrow-right-thin  close-hidden-menu" onclick="closeHiddenMenu()"></span>
+            <nav class="nav-list">
+                <li>
+                    <a href="">
+                        <span class="mdi mdi-home-outline itemIcon"></span>
+                        <div class="menu-name">
+                            <p>Home</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="mdi mdi-briefcase-outline itemIcon"></span>
+                        <div class="menu-name">
+                            <p>Find Jobs</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="mdi mdi-bell-outline itemIcon"></span>
+                        <div class="menu-name">
+                            <p>Notifications</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="mdi mdi-clipboard-list-outline itemIcon"></span>
+                        <div class="menu-name">
+                            <p>My Jobs</p>
+                            <span class="mdi mdi-chevron-down"></span>
+                        </div>
+                    </a>
+                </li>
+                <li onclick="openProfile()">
+                    <a>
+                        <figure><img src="images/userImg/profile picture (1).svg" alt="" class="profilePicture"></figure>
+                        <div class="menu-name">
+                            <p>My Profile</p>
+                            <span class="mdi mdi-chevron-down"></span>
+                        </div>
+                    </a>
+                </li>
+            </nav>
+        </div>
+
+        <div class="my-jobs">
+            <div class="my-jobs-inner">
+                <p class="card-title">My Jobs</p>
+
+                <div><hr class="line"></div>
+
+                <div class="job-item">
+                    <div class="job-title">
+                        <div class="event-title">
+                            <figure><img src="images/generalImg/unsplash_xBFTjrMIC0c.svg" alt="" class="event-image"></figure>
+                            <h4>Fashion House Event</h4>
+                        </div>
+                        <span class="mdi mdi-chevron-down" onclick="extensionHandle()"></span>
+                    </div>
+    
+                    <div class="job-request-response">
+                        <div class="request-reponse">
+                            <p>Job request accepted</p>
+                            <span class="mdi mdi-checkbox-multiple-marked-circle"></span>
+                        </div>
+    
+                        <p>
+                            You will recieve a message on location information
+                        </p>
+    
+                        <div class="acknowl-btn">
+                            <button>Acknowledge Receipt</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="job-item">
+                    <div class="job-title">
+                        <div class="event-title">
+                            <figure><img src="images/generalImg/unsplash_xBFTjrMIC0c.svg" alt="" class="event-image"></figure>
+                            <h4>Fashion House Event</h4>
+                        </div>
+                        <span class="mdi mdi-chevron-down" onclick="extensionHandle()"></span>
+                    </div>
+    
+                    <div class="job-request-response">
+                        <div class="request-reponse">
+                            <p>Job request accepted</p>
+                            <span class="mdi mdi-checkbox-multiple-marked-circle"></span>
+                        </div>
+    
+                        <p>
+                            You will recieve a message on location information
+                        </p>
+    
+                        <div class="acknowl-btn">
+                            <button>Acknowledge Receipt</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </main>
+    <footer></footer>
+
+    <script src="scripts/slideIns.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
