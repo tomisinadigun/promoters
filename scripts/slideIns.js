@@ -44,6 +44,27 @@ function closeHiddenMenu() {
 // ---------------------------------------------
 
 
+// slide in my jobs 
+// ................................................ 
+
+const slideInMyJobs = document.querySelectorAll(".my-jobs")
+
+slideInMyJobs.forEach((item) => {
+    item.classList.add("slide-out")
+})
+
+
+function openMyJobs() {
+    
+    slideInMyJobs.forEach((item) => {
+        if(item.classList.contains("slide-out")){
+            slideInMenu(item)
+        }else if(item.classList.contains("slide-in")){
+            slideOutMenu(item)
+        }
+    })
+}
+
 
 
 
@@ -67,27 +88,29 @@ function slideOutMenu(slideContainer) {
 
 
 const jobItem = document.querySelectorAll(".job-item");
+let extensionHandle = document.querySelectorAll(".extension-handle")
 
 jobItem.forEach((item) => {
     item.classList.add("hide-extension")
 })
 
-function extensionHandle() {
-    jobItem.forEach((item) => {
-        if(item.classList.contains("hide-extension")){
+extensionHandle.forEach((item) => {
+    item.addEventListener("click", () => {
+        if(item.parentElement.parentElement.classList.contains("hide-extension")){
             useExtension(item)
-        }else if(item.classList.contains("show-extension")){
+        }else if(item.parentElement.parentElement.classList.contains("show-extension")){
             removeExtension(item)
         }
     })
-}
+})
+
 
 function useExtension(extendItem) {
-    extendItem.classList.remove("hide-extension");
-    extendItem.classList.add("show-extension")
+    extendItem.parentElement.parentElement.classList.remove("hide-extension");
+    extendItem.parentElement.parentElement.classList.add("show-extension")
 }
 
 function removeExtension(extendItem) {
-    extendItem.classList.remove("show-extension");
-    extendItem.classList.add("hide-extension");
+    extendItem.parentElement.parentElement.classList.remove("show-extension");
+    extendItem.parentElement.parentElement.classList.add("hide-extension");
 }

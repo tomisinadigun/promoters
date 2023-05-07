@@ -8,11 +8,11 @@ body {
   font-family: 'Rubik', sans-serif;
   padding-inline: 128px; }
 
-.hidden-menu, .hidden-profile-card, .hidden-profile-card .profile-header .profile-bio .profile-image, .my-jobs .job-item .job-request-response .acknowl-btn button {
+.hidden-menu, .hidden-profile-card, .hidden-profile-card .profile-header .profile-bio .profile-image, .my-jobs, .my-jobs .job-item .job-request-response .acknowl-btn button {
   box-shadow: 0px 0px 2px 2px rgba(128, 128, 128, 0.16); }
 
 .my-jobs .job-item .job-request-response {
-  box-shadow: 0px 2px 4px 2px rgba(128, 128, 128, 0.08); }
+  box-shadow: 0px 2px 6px 2px rgba(128, 128, 128, 0.08); }
 
 .nav-list .profilePicture {
   box-shadow: 0px 0px 2px 1px rgba(128, 128, 128, 0.08); }
@@ -246,84 +246,87 @@ body {
   font-family: "Rubik", sans-serif; }
 
 .my-jobs {
-  border: 1px solid black;
   min-width: 570px;
   max-width: 570px;
   position: fixed;
   top: 10;
   right: 0;
   max-height: 100vh;
+  min-height: 100vh;
   overflow-y: auto;
-  padding: 24px; }
-  .my-jobs .job-item .job-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  padding: 24px 24px 170px 24px;
+  background-color: white;
+  border-radius: 8px 0px 0px 8px; }
+  .my-jobs .job-item {
     margin-bottom: 24px; }
-    .my-jobs .job-item .job-title .event-title {
+    .my-jobs .job-item .job-title {
       display: flex;
-      justify-content: none;
+      justify-content: space-between;
       align-items: center;
-      grid-column-gap: 16px; }
-    .my-jobs .job-item .job-title .event-image {
-      max-width: 52px;
-      width: 100%; }
-    .my-jobs .job-item .job-title h4 {
-      font-size: 16px;
-      line-height: 18px;
-      color: black;
-      font-weight: 600;
-      font-family: "Rubik", sans-serif; }
-    .my-jobs .job-item .job-title span {
-      font-size: 24px;
-      line-height: 18px;
-      color: #6E6E6E;
-      font-weight: 600;
-      font-family: "Rubik", sans-serif; }
-    .my-jobs .job-item .job-title span:hover {
-      cursor: pointer; }
-  .my-jobs .job-item .job-request-response {
-    border: 0.1px solid #6E6E6E;
-    padding: 24px;
-    border-radius: 8px 8px;
-    display: flex;
-    flex-direction: column;
-    grid-row-gap: 10px; }
-    .my-jobs .job-item .job-request-response p {
-      font-size: 14px;
-      line-height: 18px;
-      color: #6E6E6E;
-      font-weight: 400;
-      font-family: "Rubik", sans-serif; }
-    .my-jobs .job-item .job-request-response .request-reponse {
-      display: flex;
-      justify-content: none;
-      align-items: center;
-      grid-column-gap: 16px; }
-      .my-jobs .job-item .job-request-response .request-reponse p {
-        color: #0F6C07;
-        font-weight: 500; }
-      .my-jobs .job-item .job-request-response .request-reponse span {
+      margin-bottom: 24px; }
+      .my-jobs .job-item .job-title .event-title {
+        display: flex;
+        justify-content: none;
+        align-items: center;
+        grid-column-gap: 16px; }
+      .my-jobs .job-item .job-title .event-image {
+        max-width: 52px;
+        width: 100%; }
+      .my-jobs .job-item .job-title h4 {
+        font-size: 16px;
+        line-height: 18px;
+        color: black;
+        font-weight: 600;
+        font-family: "Rubik", sans-serif; }
+      .my-jobs .job-item .job-title span {
         font-size: 24px;
         line-height: 18px;
-        color: #0F6C07;
-        font-weight: 500;
-        font-family: "Rubik", sans-serif; }
-    .my-jobs .job-item .job-request-response .acknowl-btn {
-      display: flex;
-      justify-content: right;
-      align-items: center; }
-      .my-jobs .job-item .job-request-response .acknowl-btn button {
-        background-color: #0F6C07;
-        color: white;
-        font-size: 12px;
+        color: #6E6E6E;
         font-weight: 600;
-        padding: 10px 24px;
-        border-radius: 8px 8px 0px 8px;
-        border: none;
-        outline: none; }
-      .my-jobs .job-item .job-request-response .acknowl-btn button:hover {
+        font-family: "Rubik", sans-serif; }
+      .my-jobs .job-item .job-title span:hover {
         cursor: pointer; }
+    .my-jobs .job-item .job-request-response {
+      padding: 24px;
+      border-radius: 8px 8px;
+      display: flex;
+      flex-direction: column;
+      grid-row-gap: 10px; }
+      .my-jobs .job-item .job-request-response p {
+        font-size: 14px;
+        line-height: 18px;
+        color: #6E6E6E;
+        font-weight: 400;
+        font-family: "Rubik", sans-serif; }
+      .my-jobs .job-item .job-request-response .request-reponse {
+        display: flex;
+        justify-content: none;
+        align-items: center;
+        grid-column-gap: 16px; }
+        .my-jobs .job-item .job-request-response .request-reponse p {
+          color: #0F6C07;
+          font-weight: 500; }
+        .my-jobs .job-item .job-request-response .request-reponse span {
+          font-size: 24px;
+          line-height: 18px;
+          color: #0F6C07;
+          font-weight: 500;
+          font-family: "Rubik", sans-serif; }
+      .my-jobs .job-item .job-request-response .acknowl-btn {
+        display: flex;
+        justify-content: right;
+        align-items: center; }
+        .my-jobs .job-item .job-request-response .acknowl-btn button {
+          background-color: #0F6C07;
+          color: white;
+          font-size: 12px;
+          font-weight: 600;
+          padding: 10px 24px;
+          border-radius: 8px 8px 0px 8px;
+          border: none;
+          outline: none; }
+        .my-jobs .job-item .job-request-response .acknowl-btn button:hover {
+          cursor: pointer; }
 
 .slide-in {
   transform: translateX(0px);
