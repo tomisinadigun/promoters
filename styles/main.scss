@@ -239,7 +239,7 @@ body {
 
     @extend %elevation-one;
     max-width: 570px;
-    // border: 1px solid red;
+    z-index: 500;
 
     .profile-header {
         .backdrop {
@@ -360,6 +360,14 @@ body {
     
 }
 
+
+@media screen and (max-width:576px) {
+    .hidden-profile-card{
+        max-width: 400px;
+    }
+}
+
+
 .line {
     margin-block: $item-horizontal-space-one;
 }
@@ -368,8 +376,6 @@ body {
 }
 
 .my-jobs {
-    min-width: 570px;
-    max-width: 570px;
     position: fixed;
     top: 10;
     right: 0;
@@ -378,10 +384,12 @@ body {
     overflow-y: auto;
     padding:24px 24px 170px 24px;
     background-color: white;
-
+    
     @extend %elevation-one;
     border-radius: 8px 0px 0px 8px;
-    // border: 0.1px solid $color--alt-text-color;
+    min-width: 570px;
+    max-width: 570px;
+
     .job-item {
         margin-bottom: $item-horizontal-space-two;
         .job-title {
@@ -442,6 +450,17 @@ body {
         }
     }
 }
+
+@media screen and (max-width:576px) {
+    .my-jobs{
+        min-width: 400px;
+        max-width: 400px;
+    }
+}
+
+
+
+
 
 
 
