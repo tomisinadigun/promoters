@@ -248,7 +248,7 @@ body {
     z-index: 500;
 
     .close-profile-btn {
-        font-size: 24px;
+        font-size: 34px;
         color: $color--alt-text-color;
 
         position: absolute;
@@ -288,7 +288,7 @@ body {
                     @include text-title($fontSize:24px, $font-weight:$fontWeight-600)
                 }
                 #about-me {
-                    width: 400px;
+                    max-width: 400px;
                 }
                 p {
                     @include texts($fontSize:14px, $textColor:$color--alt-text-color)
@@ -397,7 +397,7 @@ body {
     top: 10;
     right: 0;
     
-    padding:24px 24px 170px 24px;
+    padding:32px 24px 170px 32px;
     background-color: white;
     
     @extend %elevation-one;
@@ -412,7 +412,7 @@ body {
     }
 
     .close-jobs-btn {
-        font-size: 24px;
+        font-size: 34px;
         color: $color--alt-text-color;
 
         position: absolute;
@@ -488,6 +488,12 @@ body {
     }
 }
 
+@media screen and (max-width:376px) {
+    .my-jobs{
+        min-width: 300px;
+        max-width: 300px;
+    }
+}
 
 
 

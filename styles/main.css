@@ -127,7 +127,7 @@ body {
     max-height: 100vh;
     overflow-y: auto; }
   .hidden-profile-card .close-profile-btn {
-    font-size: 24px;
+    font-size: 34px;
     color: #6E6E6E;
     position: absolute; }
   .hidden-profile-card .profile-header .backdrop {
@@ -156,7 +156,7 @@ body {
         font-weight: 600;
         font-family: "Rubik", sans-serif; }
       .hidden-profile-card .profile-header .profile-bio .about-user #about-me {
-        width: 400px; }
+        max-width: 400px; }
       .hidden-profile-card .profile-header .profile-bio .about-user p {
         font-size: 14px;
         line-height: 18px;
@@ -260,7 +260,7 @@ body {
   position: fixed;
   top: 10;
   right: 0;
-  padding: 24px 24px 170px 24px;
+  padding: 32px 24px 170px 32px;
   background-color: white;
   border-radius: 8px 0px 0px 8px;
   min-width: 570px;
@@ -270,7 +270,7 @@ body {
     min-height: 100vh;
     overflow-y: auto; }
   .my-jobs .close-jobs-btn {
-    font-size: 24px;
+    font-size: 34px;
     color: #6E6E6E;
     position: absolute;
     transform: translateY(-80%) translateX(-80%); }
@@ -349,6 +349,10 @@ body {
   .my-jobs {
     min-width: 400px;
     max-width: 400px; } }
+@media screen and (max-width: 376px) {
+  .my-jobs {
+    min-width: 300px;
+    max-width: 300px; } }
 .slide-in {
   transform: translateX(0px);
   transition: 0.5s; }
