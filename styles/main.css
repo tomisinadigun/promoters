@@ -351,7 +351,7 @@ body {
     max-width: 400px; } }
 @media screen and (max-width: 376px) {
   .my-jobs {
-    min-width: 300px;
+    min-width: 350px;
     max-width: 300px; } }
 .slide-in {
   transform: translateX(0px);
