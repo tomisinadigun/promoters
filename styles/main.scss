@@ -38,6 +38,28 @@ body {
     padding-inline: 128px;
 }
 
+// shadow styles 
+// --------------
+%elevation-one {
+    box-shadow: 0px 0px 2px 2px rgba(128, 128, 128, 0.16)
+}
+
+%elevation-two {
+    box-shadow: 0px 2px 6px 2px rgba(128, 128, 128, 0.08)
+}
+
+%elevation-three {
+    box-shadow: 0px 0px 2px 1px rgba(128, 128, 128, 0.08)
+}
+
+%pointer-cursor {
+    cursor: pointer;
+}
+
+%border-radius {
+    border-radius: 8px;
+}
+// shadow styles end here
 
 // title texts styles 
 @mixin text-title($fontSize:22px, $textColor:black, $font-weight:$fontWeight-600,){
@@ -78,25 +100,26 @@ body {
 }
 
 
-// shadow styles 
-// --------------
-%elevation-one {
-    box-shadow: 0px 0px 2px 2px rgba(128, 128, 128, 0.16)
+// images styles 
+@mixin profileImages($imgWidth:50px, $imgHeight:50px, $gWidth:100%, $imgBorderRadius:50%) {
+    max-width: $imgWidth;
+    max-height: $imgHeight;
+    width: $gWidth;
+    @extend %elevation-one;
+    border-radius: $imgBorderRadius;
 }
 
-%elevation-two {
-    box-shadow: 0px 2px 6px 2px rgba(128, 128, 128, 0.08)
+// text buttons 
+%text-button {
+    border: none;
+    background-color: white;
+    color: $color-primary;
+    font-size: 14px;
+    font-weight: $fontWeight-500;
 }
 
-%elevation-three {
-    box-shadow: 0px 0px 2px 1px rgba(128, 128, 128, 0.08)
-}
 
-%pointer-cursor {
-    cursor: pointer;
-}
 
-// shadow styles end here
 
 // page header styles begins here 
 // ------------------------------
@@ -494,6 +517,196 @@ body {
         max-width: 350px;
     }
 }
+
+
+
+
+
+main {
+    display: grid;
+    grid-column-gap: 18px;
+    grid-template-columns: 270px auto 150px;
+    .columns{
+        
+        // height: 400px;
+    }
+    .left-col {
+        border: 1px solid black;
+    }
+    .center-col {
+        
+        .search{
+            border: 0.5px solid $color--alt-text-color;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @extend %border-radius;
+            padding: 8px;
+            background-color: white;
+            margin-bottom: 24px;
+
+            input{
+                width: 100%;
+                // outline: 0.5px solid $color-primary;
+                border: 0.5px solid $color-primary;
+                height: 26px;
+                border-radius: 28px;
+                background-color: rgba(199, 198, 198, 0.2);
+                padding-inline: 24px;
+                font-weight: $fontWeight-500;
+                color: $color--alt-text-color;
+            }
+            input:focus{
+                outline: 0.5px solid $color-primary;
+            }
+        }
+
+
+        // event card 
+        .event-item {
+            padding-top: 16px;
+            @extend %elevation-one;
+            border-radius: 8px;
+        }
+        .event-item-header-one {
+            @include horizontal($justifyContent:space-between, );
+            align-items: center;
+            padding-inline: 8px;
+            .location {
+                @include horizontal($justifyContent:none, );
+                grid-column-gap: 8px;
+                .location-icon {
+                    @include texts($fontSize:28px, $textColor:$color--alt-text-color)
+                }
+                p {
+                    @include texts($textColor:$color--alt-text-color, $font-weight:$fontWeight-400)
+                }
+            }
+            .follow-btn {
+                @extend %text-button;
+            }
+        }
+        .event-item-header-two {
+            @include horizontal($justifyContent:space-between, );
+            align-items: center;
+            padding-inline: 8px;
+            margin-top: 16px;
+            .org-info {
+                @include horizontal($justifyContent:none, );
+                grid-column-gap: 8px;
+                .profile-image {
+                    @include profileImages();
+                }
+                .org-name {
+                    .post-time {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 8px;
+                        p {
+                            @include texts($fontSize:12px, $textColor:$color--alt-text-color );
+                        }
+                        
+                        span {
+                            @include texts($fontSize:8px, $textColor:$color-primary );
+                            margin-right: 8px;
+                        }
+                    }
+                }
+            }
+
+            .vacancy-info {
+                display: flex;
+                flex-direction: column;
+                grid-row-gap: 8px;
+                div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: right;
+                    span {
+                        @include texts($fontSize:8px, $textColor:$color-primary );
+                        margin-right: 8px;
+                    }
+                    p {
+                        @include texts($fontSize:12px, $textColor:$color--alt-text-color );
+                    }
+                }
+            }
+        }
+
+        .event-img {
+            margin-top: 16px;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .event-summary {
+            margin-top: 16px;
+            padding-inline: 8px;
+            p {
+                @include texts($textColor:$color--alt-text-color);
+                
+            }
+        }
+
+        .event-req {
+            display: flex;
+            flex-direction: column;
+            grid-row-gap: 16px;
+            margin-top: 16px;
+            padding-inline: 8px;
+            div {
+                display: flex;
+            
+                p {
+                    @include texts($textColor:black);
+                }
+            }
+        }
+
+        .event-card-actions {
+            @include horizontal( );
+            margin-top: 16px;
+            padding-inline: 8px;
+            border-top: 0.5px solid $color--alt-text-color;
+            padding-block: 16px;
+            div {
+                @include horizontal($justifyContent:none, );
+                grid-column-gap: 8px;
+                align-items: center;
+                .dots {
+                    @include texts($fontSize:8px, $textColor:$color-primary );
+                    // margin-right: 8px;
+                }
+                p {
+                    @include texts($fontSize:12px, $textColor:$color--alt-text-color);
+                    // margin-right: 8px;
+                }
+                .action-icon {
+                    @include texts($fontSize:24px, $textColor:$color--alt-text-color);
+                }
+            }
+
+            .apply-btn {
+                @include generalBtn()
+            }
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
