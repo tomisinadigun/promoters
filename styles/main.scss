@@ -522,14 +522,11 @@ body {
 
 
 
-main {
+.main {
     display: grid;
     grid-column-gap: 18px;
     grid-template-columns: 270px auto 150px;
-    .columns{
-        
-        // height: 400px;
-    }
+    
     .left-col {
         border: 1px solid black;
     }
@@ -696,6 +693,16 @@ main {
     
 }
 
+@media screen and (max-width:1200px) {
+    .main {
+        grid-template-columns: 270px auto 0px;
+    }
+}
+@media screen and (max-width:775px) {
+    .main {
+        grid-template-columns:0px auto 0px;
+    }
+}
 
 
 

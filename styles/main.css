@@ -8,7 +8,7 @@ body {
   font-family: 'Rubik', sans-serif;
   padding-inline: 128px; }
 
-.hidden-menu, .hidden-profile-card, .hidden-profile-card .profile-header .profile-bio .profile-image, .my-jobs, .my-jobs .job-item .job-request-response .acknowl-btn button, main .center-col .event-item, main .center-col .event-item-header-two .org-info .profile-image, main .center-col .event-card-actions .apply-btn {
+.hidden-menu, .hidden-profile-card, .hidden-profile-card .profile-header .profile-bio .profile-image, .my-jobs, .my-jobs .job-item .job-request-response .acknowl-btn button, .main .center-col .event-item, .main .center-col .event-item-header-two .org-info .profile-image, .main .center-col .event-card-actions .apply-btn {
   box-shadow: 0px 0px 2px 2px rgba(128, 128, 128, 0.16); }
 
 .my-jobs .job-item .job-request-response {
@@ -20,10 +20,10 @@ body {
 .hidden-profile-card .close-profile-btn:hover {
   cursor: pointer; }
 
-main .center-col .search {
+.main .center-col .search {
   border-radius: 8px; }
 
-main .center-col .event-item-header-one .follow-btn {
+.main .center-col .event-item-header-one .follow-btn {
   border: none;
   background-color: white;
   color: #0F6C07;
@@ -363,13 +363,13 @@ main .center-col .event-item-header-one .follow-btn {
   .my-jobs {
     min-width: 350px;
     max-width: 350px; } }
-main {
+.main {
   display: grid;
   grid-column-gap: 18px;
   grid-template-columns: 270px auto 150px; }
-  main .left-col {
+  .main .left-col {
     border: 1px solid black; }
-  main .center-col .search {
+  .main .center-col .search {
     border: 0.5px solid #6E6E6E;
     height: 40px;
     display: flex;
@@ -378,7 +378,7 @@ main {
     padding: 8px;
     background-color: white;
     margin-bottom: 24px; }
-    main .center-col .search input {
+    .main .center-col .search input {
       width: 100%;
       border: 0.5px solid #0F6C07;
       height: 26px;
@@ -387,118 +387,118 @@ main {
       padding-inline: 24px;
       font-weight: 500;
       color: #6E6E6E; }
-    main .center-col .search input:focus {
+    .main .center-col .search input:focus {
       outline: 0.5px solid #0F6C07; }
-  main .center-col .event-item {
+  .main .center-col .event-item {
     padding-top: 16px;
     border-radius: 8px; }
-  main .center-col .event-item-header-one {
+  .main .center-col .event-item-header-one {
     display: flex;
     justify-content: space-between;
     align-items: center;
     align-items: center;
     padding-inline: 8px; }
-    main .center-col .event-item-header-one .location {
+    .main .center-col .event-item-header-one .location {
       display: flex;
       justify-content: none;
       align-items: center;
       grid-column-gap: 8px; }
-      main .center-col .event-item-header-one .location .location-icon {
+      .main .center-col .event-item-header-one .location .location-icon {
         font-size: 28px;
         line-height: 18px;
         color: #6E6E6E;
         font-weight: 400;
         font-family: "Rubik", sans-serif; }
-      main .center-col .event-item-header-one .location p {
+      .main .center-col .event-item-header-one .location p {
         font-size: 14px;
         line-height: 18px;
         color: #6E6E6E;
         font-weight: 400;
         font-family: "Rubik", sans-serif; }
-  main .center-col .event-item-header-two {
+  .main .center-col .event-item-header-two {
     display: flex;
     justify-content: space-between;
     align-items: center;
     align-items: center;
     padding-inline: 8px;
     margin-top: 16px; }
-    main .center-col .event-item-header-two .org-info {
+    .main .center-col .event-item-header-two .org-info {
       display: flex;
       justify-content: none;
       align-items: center;
       grid-column-gap: 8px; }
-      main .center-col .event-item-header-two .org-info .profile-image {
+      .main .center-col .event-item-header-two .org-info .profile-image {
         max-width: 50px;
         max-height: 50px;
         width: 100%;
         border-radius: 50%; }
-      main .center-col .event-item-header-two .org-info .org-name .post-time {
+      .main .center-col .event-item-header-two .org-info .org-name .post-time {
         display: flex;
         align-items: center;
         margin-top: 8px; }
-        main .center-col .event-item-header-two .org-info .org-name .post-time p {
+        .main .center-col .event-item-header-two .org-info .org-name .post-time p {
           font-size: 12px;
           line-height: 18px;
           color: #6E6E6E;
           font-weight: 400;
           font-family: "Rubik", sans-serif; }
-        main .center-col .event-item-header-two .org-info .org-name .post-time span {
+        .main .center-col .event-item-header-two .org-info .org-name .post-time span {
           font-size: 8px;
           line-height: 18px;
           color: #0F6C07;
           font-weight: 400;
           font-family: "Rubik", sans-serif;
           margin-right: 8px; }
-    main .center-col .event-item-header-two .vacancy-info {
+    .main .center-col .event-item-header-two .vacancy-info {
       display: flex;
       flex-direction: column;
       grid-row-gap: 8px; }
-      main .center-col .event-item-header-two .vacancy-info div {
+      .main .center-col .event-item-header-two .vacancy-info div {
         display: flex;
         align-items: center;
         justify-content: right; }
-        main .center-col .event-item-header-two .vacancy-info div span {
+        .main .center-col .event-item-header-two .vacancy-info div span {
           font-size: 8px;
           line-height: 18px;
           color: #0F6C07;
           font-weight: 400;
           font-family: "Rubik", sans-serif;
           margin-right: 8px; }
-        main .center-col .event-item-header-two .vacancy-info div p {
+        .main .center-col .event-item-header-two .vacancy-info div p {
           font-size: 12px;
           line-height: 18px;
           color: #6E6E6E;
           font-weight: 400;
           font-family: "Rubik", sans-serif; }
-  main .center-col .event-img {
+  .main .center-col .event-img {
     margin-top: 16px; }
-    main .center-col .event-img img {
+    .main .center-col .event-img img {
       width: 100%;
       height: auto; }
-  main .center-col .event-summary {
+  .main .center-col .event-summary {
     margin-top: 16px;
     padding-inline: 8px; }
-    main .center-col .event-summary p {
+    .main .center-col .event-summary p {
       font-size: 14px;
       line-height: 18px;
       color: #6E6E6E;
       font-weight: 400;
       font-family: "Rubik", sans-serif; }
-  main .center-col .event-req {
+  .main .center-col .event-req {
     display: flex;
     flex-direction: column;
     grid-row-gap: 16px;
     margin-top: 16px;
     padding-inline: 8px; }
-    main .center-col .event-req div {
+    .main .center-col .event-req div {
       display: flex; }
-      main .center-col .event-req div p {
+      .main .center-col .event-req div p {
         font-size: 14px;
         line-height: 18px;
         color: black;
         font-weight: 400;
         font-family: "Rubik", sans-serif; }
-  main .center-col .event-card-actions {
+  .main .center-col .event-card-actions {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -506,31 +506,31 @@ main {
     padding-inline: 8px;
     border-top: 0.5px solid #6E6E6E;
     padding-block: 16px; }
-    main .center-col .event-card-actions div {
+    .main .center-col .event-card-actions div {
       display: flex;
       justify-content: none;
       align-items: center;
       grid-column-gap: 8px;
       align-items: center; }
-      main .center-col .event-card-actions div .dots {
+      .main .center-col .event-card-actions div .dots {
         font-size: 8px;
         line-height: 18px;
         color: #0F6C07;
         font-weight: 400;
         font-family: "Rubik", sans-serif; }
-      main .center-col .event-card-actions div p {
+      .main .center-col .event-card-actions div p {
         font-size: 12px;
         line-height: 18px;
         color: #6E6E6E;
         font-weight: 400;
         font-family: "Rubik", sans-serif; }
-      main .center-col .event-card-actions div .action-icon {
+      .main .center-col .event-card-actions div .action-icon {
         font-size: 24px;
         line-height: 18px;
         color: #6E6E6E;
         font-weight: 400;
         font-family: "Rubik", sans-serif; }
-    main .center-col .event-card-actions .apply-btn {
+    .main .center-col .event-card-actions .apply-btn {
       background-color: #0F6C07;
       color: white;
       font-size: 12px;
@@ -540,6 +540,12 @@ main {
       border: none;
       outline: none; }
 
+@media screen and (max-width: 1200px) {
+  .main {
+    grid-template-columns: 270px auto 0px; } }
+@media screen and (max-width: 775px) {
+  .main {
+    grid-template-columns: 0px auto 0px; } }
 .slide-in {
   transform: translateX(0px);
   transition: 0.5s; }
