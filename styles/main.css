@@ -368,7 +368,7 @@ body {
   grid-column-gap: 18px;
   grid-template-columns: 270px auto 150px; }
   .main .center-col .search {
-    border: 0.2px solid white;
+    border: 0.2px solid #6E6E6E;
     height: 40px;
     display: flex;
     justify-content: center;
@@ -381,7 +381,7 @@ body {
       border: 0.5px solid #0F6C07;
       height: 26px;
       border-radius: 28px;
-      background-color: rgba(199, 198, 198, 0.2);
+      background-color: white;
       padding-inline: 24px;
       font-weight: 500;
       color: #6E6E6E; }
