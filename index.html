@@ -61,292 +61,403 @@
             <span class="mdi mdi-menu"></span>
         </div>
     </header>
-    
-    <main>
-        <div class="hidden-profile-card">
-            <span class="mdi mdi-close-circle close-profile-btn" onclick="openProfile()"></span>    
-            <div class="hidden-profile-card-inner">
-                <div class="profile-header">
-                    <figure><img src="images/userImg/backdrop.svg" alt="" class="backdrop"></figure>
-                    <div class="profile-bio">
-                        <figure><img src="images/userImg/profile picture (1).svg" alt="" class="profile-image"></figure>
-                        <div class="about-user">
-                            <h3>Hannah Washinton</h3>
-                            <p id="about-me">Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit </p>
+    <div class="hidden-profile-card">
+        <span class="mdi mdi-close-circle close-profile-btn" onclick="openProfile()"></span>    
+        <div class="hidden-profile-card-inner">
+            <div class="profile-header">
+                <figure><img src="images/userImg/backdrop.svg" alt="" class="backdrop"></figure>
+                <div class="profile-bio">
+                    <figure><img src="images/userImg/profile picture (1).svg" alt="" class="profile-image"></figure>
+                    <div class="about-user">
+                        <h3>Hannah Washinton</h3>
+                        <p id="about-me">Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit </p>
+                        <div>
+                            <p><span>25</span> Jobs Done</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-inline:12px"><hr class="line"></div>
+            <div class="addressing">
+                <div class="group-input">
+                    <div class="input-item">
+                        <label for="">First Name</label>
+                        <p>Hannah</p>
+                    </div>
+                    <div class="input-item">
+                        <label for="">Last Name</label>
+                        <p>Washinton</p>
+                    </div>
+                </div>
+                <div class="group-input">
+                    <div class="input-item">
+                        <label for="">Age</label>
+                        <p>24</p>
+                    </div>
+                    <div class="input-item">
+                        <label for="">Level Of Education</label>
+                        <p>BSc</p>
+                    </div>
+                </div>
+                <div class="group-input">
+                    <div class="input-item">
+                        <label for="">State</label>
+                        <p>Lagos</p>
+                    </div>
+                    <div class="input-item">
+                        <label for="">City</label>
+                        <p>Ikeja</p>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-inline:12px"><hr class="line"></div>
+            <div class="gallery">
+                <div class="gallery-title">
+                    <p>Gallery</p>
+                </div>
+                <div class="gallery-items">
+                    <figure><img src="images/userImg/Frame 53.svg" alt="" class="gallery-item"></figure>
+                    <figure><img src="images/userImg/Frame 51.svg" alt="" class="gallery-item"></figure>
+                    <figure><img src="images/userImg/Frame 53.svg" alt="" class="gallery-item"></figure>
+                </div>
+            </div>
+            <div class="about-you">
+                <p class="about-title">About</p>
+                <p class="full-about-me">Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit </p>
+            </div>
+            <div class="settings">
+                <a href="">
+                    <div class="setting-item">
+                        <span class="mdi mdi-face-agent"></span>
+                        <p>Contact Support</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="setting-item">
+                        <span class="mdi mdi-logout-variant"></span>
+                        <p>Logout</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="hidden-menu">
+        <span class="mdi mdi-arrow-right-thin  close-hidden-menu" onclick="closeHiddenMenu()"></span>
+        <nav class="nav-list">
+            <li>
+                <a href="">
+                    <span class="mdi mdi-home-outline itemIcon"></span>
+                    <div class="menu-name">
+                        <p>Home</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span class="mdi mdi-briefcase-outline itemIcon"></span>
+                    <div class="menu-name">
+                        <p>Find Jobs</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span class="mdi mdi-bell-outline itemIcon"></span>
+                    <div class="menu-name">
+                        <p>Notifications</p>
+                    </div>
+                </a>
+            </li>
+            <li onclick="openMyJobs()">
+                <a>
+                    <span class="mdi mdi-clipboard-list-outline itemIcon"></span>
+                    <div class="menu-name">
+                        <p>My Jobs</p>
+                        <span class="mdi mdi-chevron-down"></span>
+                    </div>
+                </a>
+            </li>
+            <li onclick="openProfile()">
+                <a>
+                    <figure><img src="images/userImg/profile picture (1).svg" alt="" class="profilePicture"></figure>
+                    <div class="menu-name">
+                        <p>My Profile</p>
+                        <span class="mdi mdi-chevron-down"></span>
+                    </div>
+                </a>
+            </li>
+        </nav>
+    </div>
+
+    <div class="my-jobs">
+        <span class="mdi mdi-close-circle close-jobs-btn" onclick="openMyJobs()"></span>
+        <div class="my-jobs-inner">
+            <p class="card-title">My Jobs</p>
+
+            <div><hr class="line"></div>
+
+            <div class="job-item">
+                <div class="job-title">
+                    <div class="event-title">
+                        <figure><img src="images/generalImg/unsplash_xBFTjrMIC0c.svg" alt="" class="event-image"></figure>
+                        <h4>Fashion House Event</h4>
+                    </div>
+                    <span class="mdi mdi-chevron-down  extension-handle"></span>
+                </div>
+
+                <div class="job-request-response">
+                    <div class="request-reponse">
+                        <p>Job request accepted</p>
+                        <span class="mdi mdi-checkbox-multiple-marked-circle"></span>
+                    </div>
+
+                    <p>
+                        You will recieve a message on location information
+                    </p>
+
+                    <div class="acknowl-btn">
+                        <button>Acknowledge Receipt</button>
+                    </div>
+                </div>
+            </div>
+            <div class="job-item">
+                <div class="job-title">
+                    <div class="event-title">
+                        <figure><img src="images/generalImg/unsplash_H14pfhlfr24.svg" alt="" class="event-image"></figure>
+                        <h4>Fashion House Event</h4>
+                    </div>
+                    <span class="mdi mdi-chevron-down  extension-handle" ></span>
+                </div>
+
+                <div class="job-request-response">
+                    <div class="request-reponse">
+                        <p>Job request accepted</p>
+                        <span class="mdi mdi-checkbox-multiple-marked-circle"></span>
+                    </div>
+
+                    <p>
+                        You will recieve a message on location information
+                    </p>
+
+                    <div class="acknowl-btn">
+                        <button>Acknowledge Receipt</button>
+                    </div>
+                </div>
+            </div>
+            <div class="job-item">
+                <div class="job-title">
+                    <div class="event-title">
+                        <figure><img src="images/generalImg/unsplash_xBFTjrMIC0c.svg" alt="" class="event-image"></figure>
+                        <h4>Fashion House Event</h4>
+                    </div>
+                    <span class="mdi mdi-chevron-down  extension-handle" ></span>
+                </div>
+
+                <div class="job-request-response">
+                    <div class="request-reponse">
+                        <p>Job request accepted</p>
+                        <span class="mdi mdi-checkbox-multiple-marked-circle"></span>
+                    </div>
+
+                    <p>
+                        You will recieve a message on location information
+                    </p>
+
+                    <div class="acknowl-btn">
+                        <button>Acknowledge Receipt</button>
+                    </div>
+                </div>
+            </div>
+            <div class="job-item">
+                <div class="job-title">
+                    <div class="event-title">
+                        <figure><img src="images/generalImg/unsplash_H14pfhlfr24.svg" alt="" class="event-image"></figure>
+                        <h4>Fashion House Event</h4>
+                    </div>
+                    <span class="mdi mdi-chevron-down  extension-handle" ></span>
+                </div>
+
+                <div class="job-request-response">
+                    <div class="request-reponse">
+                        <p>Job request accepted</p>
+                        <span class="mdi mdi-checkbox-multiple-marked-circle"></span>
+                    </div>
+
+                    <p>
+                        You will recieve a message on location information
+                    </p>
+
+                    <div class="acknowl-btn">
+                        <button>Acknowledge Receipt</button>
+                    </div>
+                </div>
+            </div>
+            <div class="job-item">
+                <div class="job-title">
+                    <div class="event-title">
+                        <figure><img src="images/generalImg/unsplash_xBFTjrMIC0c.svg" alt="" class="event-image"></figure>
+                        <h4>Fashion House Event</h4>
+                    </div>
+                    <span class="mdi mdi-chevron-down  extension-handle" ></span>
+                </div>
+
+                <div class="job-request-response">
+                    <div class="request-reponse">
+                        <p>Job request accepted</p>
+                        <span class="mdi mdi-checkbox-multiple-marked-circle"></span>
+                    </div>
+
+                    <p>
+                        You will recieve a message on location information
+                    </p>
+
+                    <div class="acknowl-btn">
+                        <button>Acknowledge Receipt</button>
+                    </div>
+                </div>
+            </div>
+            <div class="job-item">
+                <div class="job-title">
+                    <div class="event-title">
+                        <figure><img src="images/generalImg/unsplash_H14pfhlfr24.svg" alt="" class="event-image"></figure>
+                        <h4>Fashion House Event</h4>
+                    </div>
+                    <span class="mdi mdi-chevron-down  extension-handle" ></span>
+                </div>
+
+                <div class="job-request-response">
+                    <div class="request-reponse">
+                        <p>Job request accepted</p>
+                        <span class="mdi mdi-checkbox-multiple-marked-circle"></span>
+                    </div>
+
+                    <p>
+                        You will recieve a message on location information
+                    </p>
+
+                    <div class="acknowl-btn">
+                        <button>Acknowledge Receipt</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class="main">
+
+        <div class="left-col columns"></div>
+        <div class="center-col columns" >
+            <div class="search">
+                <input type="text" placeholder="Search Jobs...">
+            </div>
+
+            <div class="event-item">
+                <div class="event-item-header">
+                    <div class="event-item-header-one">
+                        <div class="location">
+                            <span class="mdi mdi-map-marker-radius location-icon"></span>
+                            <p><span>Event Location</span> : Victoria Island</p>
+                        </div>
+                        <button class="follow-btn"><span class="mdi mdi-plus"></span> Follow</button>
+                    </div>
+                    <div class="event-item-header-two">
+                        <div class="org-info">
+                            <figure><img src="images/userImg/profile picture (1).svg" alt="" class="profile-image"></figure>
+                            <div class="org-name">
+                                <h4>Opportunity Events</h4>
+                                <div class="post-time">
+                                    <span class="mdi mdi-circle"></span>
+                                    <p >2hrs ago</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vacancy-info">
                             <div>
-                                <p><span>25</span> Jobs Done</p>
+                                <span class="mdi mdi-circle"></span>
+                                <p>500 Persons Applied</p>
+                            </div>
+                            <div>
+                                <span class="mdi mdi-circle"></span>
+                                <p>200 Employed</p>
+                            </div>
+                            <div>
+                                <span class="mdi mdi-circle"></span>
+                                <p>100 Vacancies Left</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div style="padding-inline:12px"><hr class="line"></div>
-                <div class="addressing">
-                    <div class="group-input">
-                        <div class="input-item">
-                            <label for="">First Name</label>
-                            <p>Hannah</p>
-                        </div>
-                        <div class="input-item">
-                            <label for="">Last Name</label>
-                            <p>Washinton</p>
-                        </div>
-                    </div>
-                    <div class="group-input">
-                        <div class="input-item">
-                            <label for="">Age</label>
-                            <p>24</p>
-                        </div>
-                        <div class="input-item">
-                            <label for="">Level Of Education</label>
-                            <p>BSc</p>
-                        </div>
-                    </div>
-                    <div class="group-input">
-                        <div class="input-item">
-                            <label for="">State</label>
-                            <p>Lagos</p>
-                        </div>
-                        <div class="input-item">
-                            <label for="">City</label>
-                            <p>Ikeja</p>
-                        </div>
-                    </div>
-                </div>
-                <div style="padding-inline:12px"><hr class="line"></div>
-                <div class="gallery">
-                    <div class="gallery-title">
-                        <p>Gallery</p>
-                    </div>
-                    <div class="gallery-items">
-                        <figure><img src="images/userImg/Frame 53.svg" alt="" class="gallery-item"></figure>
-                        <figure><img src="images/userImg/Frame 51.svg" alt="" class="gallery-item"></figure>
-                        <figure><img src="images/userImg/Frame 53.svg" alt="" class="gallery-item"></figure>
-                    </div>
-                </div>
-                <div class="about-you">
-                    <p class="about-title">About</p>
-                    <p class="full-about-me">Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit </p>
-                </div>
-                <div class="settings">
-                    <a href="">
-                        <div class="setting-item">
-                            <span class="mdi mdi-face-agent"></span>
-                            <p>Contact Support</p>
-                        </div>
-                    </a>
-                    <a href="">
-                        <div class="setting-item">
-                            <span class="mdi mdi-logout-variant"></span>
-                            <p>Logout</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="hidden-menu">
-            <span class="mdi mdi-arrow-right-thin  close-hidden-menu" onclick="closeHiddenMenu()"></span>
-            <nav class="nav-list">
-                <li>
-                    <a href="">
-                        <span class="mdi mdi-home-outline itemIcon"></span>
-                        <div class="menu-name">
-                            <p>Home</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span class="mdi mdi-briefcase-outline itemIcon"></span>
-                        <div class="menu-name">
-                            <p>Find Jobs</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span class="mdi mdi-bell-outline itemIcon"></span>
-                        <div class="menu-name">
-                            <p>Notifications</p>
-                        </div>
-                    </a>
-                </li>
-                <li onclick="openMyJobs()">
-                    <a>
-                        <span class="mdi mdi-clipboard-list-outline itemIcon"></span>
-                        <div class="menu-name">
-                            <p>My Jobs</p>
-                            <span class="mdi mdi-chevron-down"></span>
-                        </div>
-                    </a>
-                </li>
-                <li onclick="openProfile()">
-                    <a>
-                        <figure><img src="images/userImg/profile picture (1).svg" alt="" class="profilePicture"></figure>
-                        <div class="menu-name">
-                            <p>My Profile</p>
-                            <span class="mdi mdi-chevron-down"></span>
-                        </div>
-                    </a>
-                </li>
-            </nav>
-        </div>
 
-        <div class="my-jobs">
-            <span class="mdi mdi-close-circle close-jobs-btn" onclick="openMyJobs()"></span>
-            <div class="my-jobs-inner">
-                <p class="card-title">My Jobs</p>
+                <figure class="event-img"><img src="images/userImg/eventimg.svg" alt=""></figure>
+                <div class="event-summary">
+                    <p>Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna 
+                        aliqua. Ut enim ad minim veniam, quis 
+                        nostrud exercitation ullamco laboris 
+                        nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit 
+                        in voluptate velit esse cillum dolore eu
+                    </p>
+                </div>
 
-                <div><hr class="line"></div>
+                <div class="event-req">
+                    <div>
+                        <p>Date:</p>
+                        <p>19-05-2023</p>
+                    </div>
+                    <div>
+                        <p>Time:</p>
+                        <p>08:20pm</p>
+                    </div>
+                    <div>
+                        <p>Gender:</p>
+                        <p>Male</p>
+                    </div>
+                    <div>
+                        <p>Location:</p>
+                        <p>Victoria Island</p>
+                    </div>
+                    <div>
+                        <p>Pay:</p>
+                        <p>&#8358;50,000</p>
+                    </div>
+                </div>
 
-                <div class="job-item">
-                    <div class="job-title">
-                        <div class="event-title">
-                            <figure><img src="images/generalImg/unsplash_xBFTjrMIC0c.svg" alt="" class="event-image"></figure>
-                            <h4>Fashion House Event</h4>
+                <div class="event-card-actions">
+                    <div>
+                        <div>
+                            <span class="mdi mdi-circle dots"></span>
+                            <p>500 Likes</p>
+                            <span class="mdi mdi-thumb-up-outline action-icon"></span>
                         </div>
-                        <span class="mdi mdi-chevron-down  extension-handle"></span>
-                    </div>
-    
-                    <div class="job-request-response">
-                        <div class="request-reponse">
-                            <p>Job request accepted</p>
-                            <span class="mdi mdi-checkbox-multiple-marked-circle"></span>
-                        </div>
-    
-                        <p>
-                            You will recieve a message on location information
-                        </p>
-    
-                        <div class="acknowl-btn">
-                            <button>Acknowledge Receipt</button>
+                        <div>
+                            <span class="mdi mdi-circle dots"></span>
+                            <p>1k shared</p>
+                            <span class="mdi mdi-share-variant-outline action-icon"></span>
                         </div>
                     </div>
-                </div>
-                <div class="job-item">
-                    <div class="job-title">
-                        <div class="event-title">
-                            <figure><img src="images/generalImg/unsplash_H14pfhlfr24.svg" alt="" class="event-image"></figure>
-                            <h4>Fashion House Event</h4>
-                        </div>
-                        <span class="mdi mdi-chevron-down  extension-handle" ></span>
-                    </div>
-    
-                    <div class="job-request-response">
-                        <div class="request-reponse">
-                            <p>Job request accepted</p>
-                            <span class="mdi mdi-checkbox-multiple-marked-circle"></span>
-                        </div>
-    
-                        <p>
-                            You will recieve a message on location information
-                        </p>
-    
-                        <div class="acknowl-btn">
-                            <button>Acknowledge Receipt</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="job-item">
-                    <div class="job-title">
-                        <div class="event-title">
-                            <figure><img src="images/generalImg/unsplash_xBFTjrMIC0c.svg" alt="" class="event-image"></figure>
-                            <h4>Fashion House Event</h4>
-                        </div>
-                        <span class="mdi mdi-chevron-down  extension-handle" ></span>
-                    </div>
-    
-                    <div class="job-request-response">
-                        <div class="request-reponse">
-                            <p>Job request accepted</p>
-                            <span class="mdi mdi-checkbox-multiple-marked-circle"></span>
-                        </div>
-    
-                        <p>
-                            You will recieve a message on location information
-                        </p>
-    
-                        <div class="acknowl-btn">
-                            <button>Acknowledge Receipt</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="job-item">
-                    <div class="job-title">
-                        <div class="event-title">
-                            <figure><img src="images/generalImg/unsplash_H14pfhlfr24.svg" alt="" class="event-image"></figure>
-                            <h4>Fashion House Event</h4>
-                        </div>
-                        <span class="mdi mdi-chevron-down  extension-handle" ></span>
-                    </div>
-    
-                    <div class="job-request-response">
-                        <div class="request-reponse">
-                            <p>Job request accepted</p>
-                            <span class="mdi mdi-checkbox-multiple-marked-circle"></span>
-                        </div>
-    
-                        <p>
-                            You will recieve a message on location information
-                        </p>
-    
-                        <div class="acknowl-btn">
-                            <button>Acknowledge Receipt</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="job-item">
-                    <div class="job-title">
-                        <div class="event-title">
-                            <figure><img src="images/generalImg/unsplash_xBFTjrMIC0c.svg" alt="" class="event-image"></figure>
-                            <h4>Fashion House Event</h4>
-                        </div>
-                        <span class="mdi mdi-chevron-down  extension-handle" ></span>
-                    </div>
-    
-                    <div class="job-request-response">
-                        <div class="request-reponse">
-                            <p>Job request accepted</p>
-                            <span class="mdi mdi-checkbox-multiple-marked-circle"></span>
-                        </div>
-    
-                        <p>
-                            You will recieve a message on location information
-                        </p>
-    
-                        <div class="acknowl-btn">
-                            <button>Acknowledge Receipt</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="job-item">
-                    <div class="job-title">
-                        <div class="event-title">
-                            <figure><img src="images/generalImg/unsplash_H14pfhlfr24.svg" alt="" class="event-image"></figure>
-                            <h4>Fashion House Event</h4>
-                        </div>
-                        <span class="mdi mdi-chevron-down  extension-handle" ></span>
-                    </div>
-    
-                    <div class="job-request-response">
-                        <div class="request-reponse">
-                            <p>Job request accepted</p>
-                            <span class="mdi mdi-checkbox-multiple-marked-circle"></span>
-                        </div>
-    
-                        <p>
-                            You will recieve a message on location information
-                        </p>
-    
-                        <div class="acknowl-btn">
-                            <button>Acknowledge Receipt</button>
-                        </div>
+
+                    <div>
+                        <button class="apply-btn">Apply For Job</button>
                     </div>
                 </div>
             </div>
         </div>
-       
+        <div class="right-col columns"></div>
+        <div>
+            
+        </div>
+
+
+
+
+
+
+
+        
     </main>
     <footer></footer>
+    
 
     <script src="scripts/slideIns.js"></script>
     <script src="scripts/main.js"></script>
