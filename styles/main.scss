@@ -242,7 +242,7 @@ body {
 
 @media screen and (max-width:1024px) {
     body {
-        padding-inline: 4px;
+        padding-inline: 0px;
     }
     .header {
         .nav-list {
@@ -532,7 +532,7 @@ body {
 
 .main {
     display: grid;
-    grid-column-gap: 18px;
+    grid-column-gap: 10px;
     grid-template-columns: 270px auto 0px;
     
     .left-col {
@@ -558,7 +558,6 @@ body {
 
             .about-user {
                 border-radius: 0px 0px 8px 8px;
-                border: 1px solid red;
                 margin-top: 64px;
                 text-align: center;
                 background: white;

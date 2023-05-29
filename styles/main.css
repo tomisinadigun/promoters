@@ -121,7 +121,7 @@ body {
 
 @media screen and (max-width: 1024px) {
   body {
-    padding-inline: 4px; }
+    padding-inline: 0px; }
 
   .header .nav-list {
     display: none; }
@@ -368,7 +368,7 @@ body {
     max-width: 350px; } }
 .main {
   display: grid;
-  grid-column-gap: 18px;
+  grid-column-gap: 10px;
   grid-template-columns: 270px auto 0px; }
   .main .left-col .standby-profile .standby-profile-pictures {
     height: 100px;
