@@ -590,6 +590,14 @@ body {
 @media screen and (max-width: 775px) {
   .main {
     grid-template-columns: 0px auto 0px; }
+    .main .center-col .event-card-actions {
+      display: block;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column; }
+      .main .center-col .event-card-actions .apply-btn {
+        width: 100%;
+        margin-top: 16px; }
     .main .standby-profile-outer {
       display: none; } }
 .slide-in {
