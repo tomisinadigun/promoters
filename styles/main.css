@@ -8,8 +8,11 @@ body {
   font-family: 'Rubik', sans-serif;
   padding-inline: 128px; }
 
-.hidden-menu, .hidden-profile-card, .hidden-profile-card .profile-header .profile-bio .profile-image, .my-jobs, .my-jobs .job-item .job-request-response .acknowl-btn button, .main .center-col .event-item, .main .center-col .event-item-header-two .org-info .profile-image, .main .center-col .event-card-actions .apply-btn {
-  box-shadow: 0px 0px 2px 2px rgba(128, 128, 128, 0.16); }
+@media screen and (max-width: 700px) {
+  body {
+    padding-inline: 0px; } }
+.hidden-menu, .hidden-profile-card, .hidden-profile-card .profile-header .profile-bio .profile-image, .my-jobs, .my-jobs .job-item .job-request-response .acknowl-btn button, .main .left-col .standby-profile, .main .left-col .standby-profile .standby-profile-pictures .standby-profile-image, .main .left-col .standby-profile .about-user button, .main .center-col .event-item, .main .center-col .event-item-header-two .org-info .profile-image, .main .center-col .event-card-actions .apply-btn {
+  box-shadow: 0px 0px 8px 2px rgba(128, 128, 128, 0.5); }
 
 .my-jobs .job-item .job-request-response {
   box-shadow: 0px 2px 6px 2px rgba(128, 128, 128, 0.08); }
@@ -20,7 +23,7 @@ body {
 .hidden-profile-card .close-profile-btn:hover {
   cursor: pointer; }
 
-.main .center-col .search {
+.main .left-col .standby-profile, .main .center-col .search {
   border-radius: 8px; }
 
 .main .center-col .event-item-header-one .follow-btn {
@@ -118,7 +121,7 @@ body {
 
 @media screen and (max-width: 1024px) {
   body {
-    padding-inline: 24px; }
+    padding-inline: 4px; }
 
   .header .nav-list {
     display: none; }
@@ -346,7 +349,7 @@ body {
         .my-jobs .job-item .job-request-response .acknowl-btn button {
           background-color: #0F6C07;
           color: white;
-          font-size: 12px;
+          font-size: 16px;
           font-weight: 600;
           padding: 10px 24px;
           border-radius: 8px 8px 0px 8px;
@@ -366,7 +369,50 @@ body {
 .main {
   display: grid;
   grid-column-gap: 18px;
-  grid-template-columns: 270px auto 150px; }
+  grid-template-columns: 270px auto 0px; }
+  .main .left-col .standby-profile .standby-profile-pictures {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px 8px 0px 0px; }
+    .main .left-col .standby-profile .standby-profile-pictures .standby-profile-image {
+      min-width: 110px;
+      max-width: 110px;
+      width: 100%;
+      height: auto;
+      margin-top: 44px;
+      border-radius: 50%; }
+  .main .left-col .standby-profile .about-user {
+    border-radius: 0px 0px 8px 8px;
+    margin-top: 64px;
+    text-align: center;
+    background: white; }
+    .main .left-col .standby-profile .about-user h3 {
+      font-size: 24px;
+      color: black;
+      font-weight: 600;
+      font-family: "Rubik", sans-serif;
+      margin-bottom: 10px; }
+    .main .left-col .standby-profile .about-user .about-me {
+      padding-inline: 8px;
+      font-size: 14px;
+      line-height: 18px;
+      color: #6E6E6E;
+      font-weight: 400;
+      font-family: "Rubik", sans-serif;
+      margin-bottom: 16px; }
+    .main .left-col .standby-profile .about-user button {
+      background-color: #0F6C07;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 10px 24px;
+      border-radius: 8px 8px 0px 8px;
+      border: none;
+      outline: none;
+      margin-bottom: 16px; }
+    .main .left-col .standby-profile .about-user button:hover {
+      cursor: pointer; }
   .main .center-col .search {
     border: 0.2px solid #6E6E6E;
     height: 40px;
@@ -531,7 +577,7 @@ body {
     .main .center-col .event-card-actions .apply-btn {
       background-color: #0F6C07;
       color: white;
-      font-size: 12px;
+      font-size: 16px;
       font-weight: 600;
       padding: 10px 24px;
       border-radius: 8px 8px 0px 8px;
@@ -543,7 +589,9 @@ body {
     grid-template-columns: 270px auto 0px; } }
 @media screen and (max-width: 775px) {
   .main {
-    grid-template-columns: 0px auto 0px; } }
+    grid-template-columns: 0px auto 0px; }
+    .main .standby-profile-outer {
+      display: none; } }
 .slide-in {
   transform: translateX(0px);
   transition: 0.5s; }

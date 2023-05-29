@@ -38,10 +38,17 @@ body {
     padding-inline: 128px;
 }
 
+@media screen and (max-width:700px) {
+    body {
+        padding-inline: 0px;
+    }
+}
+
+
 // shadow styles 
 // --------------
 %elevation-one {
-    box-shadow: 0px 0px 2px 2px rgba(128, 128, 128, 0.16)
+    box-shadow: 0px 0px 8px 2px rgba(128, 128, 128, 0.5)
 }
 
 %elevation-two {
@@ -87,7 +94,7 @@ body {
 }
 
 // buttons 
-@mixin generalBtn($btn-background:$color-primary, $btn-color:white, $btn-font-size:12px, $btn-font-weight:$fontWeight-600){
+@mixin generalBtn($btn-background:$color-primary, $btn-color:white, $btn-font-size:16px, $btn-font-weight:$fontWeight-600){
     background-color: $btn-background;
     color: white;
     font-size: $btn-font-size;
@@ -126,6 +133,7 @@ body {
 .header {
     @include horizontal();
     padding-block: 30px;
+    
 
     #logo {
         @include text-title($fontSize:32px, $textColor:$color-primary)
@@ -234,7 +242,7 @@ body {
 
 @media screen and (max-width:1024px) {
     body {
-        padding-inline: 24px;
+        padding-inline: 4px;
     }
     .header {
         .nav-list {
@@ -525,13 +533,57 @@ body {
 .main {
     display: grid;
     grid-column-gap: 18px;
-    grid-template-columns: 270px auto 150px;
+    grid-template-columns: 270px auto 0px;
     
     .left-col {
-        // border: 1px solid black;
+        .standby-profile {
+            @extend %elevation-one;
+            @extend %border-radius;
+            .standby-profile-pictures {
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                border-radius: 8px 8px 0px 0px;
+    
+                .standby-profile-image{
+                    min-width: 110px;
+                    max-width: 110px;
+                    width: 100%;
+                    height: auto;
+                    margin-top: 44px;
+                    @extend %elevation-one;
+                    border-radius: 50%;
+                }
+            }
+
+            .about-user {
+                border-radius: 0px 0px 8px 8px;
+                margin-top: 64px;
+                text-align: center;
+                background: white;
+                h3 {
+                    @include text-title($fontSize:24px, $font-weight:$fontWeight-600);
+                    margin-bottom:10px;
+                }
+                .about-me {
+                    // max-width: 400px;
+                    padding-inline: 8px;
+                    @include texts($fontSize:14px, $textColor:$color--alt-text-color);
+                    margin-bottom:16px;
+                }
+                button {
+                    @include generalBtn();
+                    margin-bottom:16px;
+                }
+                button:hover {
+                    cursor: pointer;
+                }
+            }
+            
+        }
+        
     }
     .center-col {
-        
         .search{
             border: 0.2px solid $color--alt-text-color;
             height: 40px;
@@ -693,6 +745,11 @@ body {
     
 }
 
+
+
+
+
+
 @media screen and (max-width:1200px) {
     .main {
         grid-template-columns: 270px auto 0px;
@@ -700,9 +757,15 @@ body {
 }
 @media screen and (max-width:775px) {
     .main {
-        grid-template-columns:0px auto 0px;
+        grid-template-columns:0px auto 0px; 
+        .standby-profile-outer{
+            display: none;
+        }
     }
 }
+
+
+
 
 
 
